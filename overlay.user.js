@@ -13,8 +13,8 @@
 // load from server?
 const images = [{
     url: "https://raw.githubusercontent.com/Esryok/r-place/main/overlays/serials.png",
-    left: 1764,
-    top: 1314
+    left: 1763,
+    top: 1313
 },{
     url: "https://raw.githubusercontent.com/Esryok/r-place/main/overlays/pgte.png",
     left: 934,
