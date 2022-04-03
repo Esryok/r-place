@@ -2,17 +2,19 @@
 // @name         r/place assistant
 // @version      0.1
 // @author       Esryok
+// @run-at       document-ready
 // @namespace    http://tampermonkey.net/
 // @description  Monitor and guide pixel placement
 // @match        https://hot-potato.reddit.com/embed*
 // @grant        none
+// @downloadUrl  https://github.com/Esryok/r-place/raw/main/overlay.user.js
 // ==/UserScript==
 
 // load from server?
 const images = [{
     url: "https://raw.githubusercontent.com/Esryok/r-place/main/overlays/serials.png",
-    left: 1765,
-    top: 1385
+    left: 1764,
+    top: 1314
 },{
     url: "https://raw.githubusercontent.com/Esryok/r-place/main/overlays/pgte.png",
     left: 934,
@@ -20,10 +22,11 @@ const images = [{
 }]
 
 function overlayImage(elem, imageConfig) {
+    console.log(elem, imageConfig)
     const image = document.createElement("img");
     image.src = imageConfig.url;
     image.onload = () => {
-        image.style = `position: absolute; left: ${imageConfig.left}; top: ${imageConfig.top}; width: ${image.width/3}px; height: ${image.height/3}px; image-rendering: pixelated; z-index: 1`;
+        image.style = `position: absolute; left: ${imageConfig.left}px; top: ${imageConfig.top}px; width: ${image.width/3}px; height: ${image.height/3}px; image-rendering: pixelated; z-index: 1`;
     };
     elem.appendChild(image);
 }
