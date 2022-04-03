@@ -1,13 +1,14 @@
 // ==UserScript==
 // @name         r/place assistant
-// @version      0.1
+// @version      0.2
 // @author       Esryok
 // @run-at       document-ready
 // @namespace    http://tampermonkey.net/
 // @description  Monitor and guide pixel placement
 // @match        https://hot-potato.reddit.com/embed*
 // @grant        none
-// @downloadUrl  https://github.com/Esryok/r-place/raw/main/overlay.user.js
+// @updateURL    https://github.com/Esryok/r-place/raw/main/overlay.user.js
+// @downloadURL  https://github.com/Esryok/r-place/raw/main/overlay.user.js
 // ==/UserScript==
 
 // load from server?
