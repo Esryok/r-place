@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         r/place assistant
-// @version      0.2
+// @version      0.2.1
 // @author       Esryok
 // @run-at       document-ready
 // @namespace    http://tampermonkey.net/
@@ -25,7 +25,7 @@ const images = [{
 function overlayImage(elem, imageConfig) {
     console.log(elem, imageConfig)
     const image = document.createElement("img");
-    image.src = imageConfig.url;
+    image.src = imageConfig.url + "?time=" + Date.now();
     image.onload = () => {
         image.style = `position: absolute; left: ${imageConfig.left}px; top: ${imageConfig.top}px; width: ${image.width/3}px; height: ${image.height/3}px; image-rendering: pixelated; z-index: 1`;
     };
